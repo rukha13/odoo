@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_construction_root"
+                  name="Construction"
+                  sequence="10"
+                  web_icon="construction_plan_import,static/description/icon.png"
+                  action="action_construction_task_material_line"/>
+
+        <menuitem id="menu_construction_materials"
+                  name="Planned Materials"
+                  parent="menu_construction_root"
+                  sequence="10"
+                  action="action_construction_task_material_line"/>
+
+        <menuitem id="menu_construction_import"
+                  name="Imports"
+                  parent="menu_construction_root"
+                  sequence="20"/>
+
+        <menuitem id="menu_construction_import_plan"
+                  name="Import Plan (Excel)"
+                  parent="menu_construction_import"
+                  sequence="10"
+                  action="action_construction_plan_import_wizard"/>
+    </data>
+</odoo>

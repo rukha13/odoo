@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_excel_import_root"
+              name="Excel Import"
+              web_icon="excel_import,static/description/icon.png"
+              sequence="100"/>
+
+    <menuitem id="menu_excel_materials"
+              name="Materials"
+              parent="menu_excel_import_root"
+              action="action_excel_material"
+              sequence="10"/>
+
+    <menuitem id="menu_excel_import"
+              name="Import Data"
+              parent="menu_excel_import_root"
+              action="action_excel_import_wizard"
+              sequence="20"/>
+</odoo>

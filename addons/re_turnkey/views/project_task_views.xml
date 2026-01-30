@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_project_task_form_re_unit" model="ir.ui.view">
+            <field name="name">project.task.form.re.unit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="re_unit_id" />
+                </xpath>
+                <xpath expr="//field[@name='re_unit_id']" position="after">
+                    <field name="building_id" readonly="1" />
+                    <field name="re_project_id" readonly="1" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_project_task_tree_re_unit" model="ir.ui.view">
+            <field name="name">project.task.tree.re.unit</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='project_id']" position="after">
+                    <field name="re_unit_id" />
+                    <field name="building_id" />
+                    <field name="re_project_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_construction_plan_import_wizard_form" model="ir.ui.view">
+            <field name="name">construction.plan.import.wizard.form</field>
+            <field name="model">construction.plan.import.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Import Plan (Excel)">
+                    <sheet>
+                        <group>
+                            <field name="file" filename="filename"/>
+                            <field name="filename" readonly="1"/>
+                        </group>
+
+                        <group string="Options">
+                            <field name="update_existing"/>
+                            <field name="create_stage_if_missing"/>
+                            <field name="create_dependencies"/>
+                        </group>
+
+                        <group>
+                            <field name="import_materials"/>
+                            <field name="create_product_if_missing"
+                                   invisible="not import_materials"/>
+                            <field name="create_uom_if_missing"
+                                   invisible="not import_materials"/>
+                        </group>
+
+                        <group>
+                            <field name="project_name_prefix"/>
+                        </group>
+
+                        <footer>
+                            <button string="Import" type="object" name="action_import" class="btn-primary"/>
+                            <button string="Cancel" class="btn-secondary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_construction_plan_import_wizard" model="ir.actions.act_window">
+            <field name="name">Import Plan (Excel)</field>
+            <field name="res_model">construction.plan.import.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Turnkey Construction - Unit Sales Core",
+    "version": "19.0.1.0.0",
+    "category": "Construction/Real Estate",
+    "summary": "Core unit model + integrations with Sales, CRM, Project",
+    "license": "LGPL-3",
+    "author": "Your Company",
+    "depends": [
+        "base",
+        "mail",
+        "project",
+        "sale_management",
+        "crm",
+    ],
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "data/sequences.xml",
+        "views/menu.xml",
+        "views/building_views.xml",
+        "views/unit_views.xml",
+        "views/handover_views.xml",
+        "views/sale_order_views.xml",
+        "views/crm_lead_views.xml",
+        "views/project_task_views.xml",
+    ],
+    "application": True,
+    "installable": True,
+}

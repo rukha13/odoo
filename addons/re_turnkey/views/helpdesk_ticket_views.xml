@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_helpdesk_ticket_form_re_unit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.form.re.unit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="re_unit_id" />
+                </xpath>
+                <xpath expr="//field[@name='re_unit_id']" position="after">
+                    <field name="building_id" readonly="1" />
+                    <field name="project_id" readonly="1" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_helpdesk_ticket_tree_re_unit" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.tree.re.unit</field>
+            <field name="model">helpdesk.ticket</field>
+            <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="re_unit_id" />
+                    <field name="building_id" />
+                    <field name="project_id" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

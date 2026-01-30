@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_re_building_user,re.building user,model_re_building,base.group_user,1,1,1,1
+access_re_unit_user,re.unit user,model_re_unit,base.group_user,1,1,1,1
+access_re_handover_user,re.handover user,model_re_handover,base.group_user,1,1,1,1

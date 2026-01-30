@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_construction_plan_import_wizard,construction.plan.import.wizard,model_construction_plan_import_wizard,base.group_system,1,1,1,1
+access_construction_task_material_line_admin,construction.task.material.line,model_construction_task_material_line,base.group_system,1,1,1,1
+access_construction_task_material_line_all,construction.task.material.line,model_construction_task_material_line,construction_plan_import.group_construction_plan_import_manager,1,1,1,1
